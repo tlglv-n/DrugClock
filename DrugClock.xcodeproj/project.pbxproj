@@ -11,6 +11,8 @@
 		EC712F602A3AED9F00F0CBD0 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC712F5F2A3AED9F00F0CBD0 /* MainViewModel.swift */; };
 		EC712F672A3AF0C700F0CBD0 /* Drug+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC712F652A3AF0C700F0CBD0 /* Drug+CoreDataClass.swift */; };
 		EC712F682A3AF0C700F0CBD0 /* Drug+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC712F662A3AF0C700F0CBD0 /* Drug+CoreDataProperties.swift */; };
+		EC712F6C2A3B03BA00F0CBD0 /* DrugCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC712F6A2A3B03BA00F0CBD0 /* DrugCell.swift */; };
+		EC712F6D2A3B03BA00F0CBD0 /* DrugCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC712F6B2A3B03BA00F0CBD0 /* DrugCell.xib */; };
 		ECE4B7D02A39BED3009314E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE4B7CF2A39BED3009314E5 /* AppDelegate.swift */; };
 		ECE4B7D22A39BED3009314E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE4B7D12A39BED3009314E5 /* SceneDelegate.swift */; };
 		ECE4B7D42A39BED3009314E5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE4B7D32A39BED3009314E5 /* LoginViewController.swift */; };
@@ -25,6 +27,8 @@
 		EC712F5F2A3AED9F00F0CBD0 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		EC712F652A3AF0C700F0CBD0 /* Drug+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Drug+CoreDataClass.swift"; sourceTree = "<group>"; };
 		EC712F662A3AF0C700F0CBD0 /* Drug+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Drug+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EC712F6A2A3B03BA00F0CBD0 /* DrugCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugCell.swift; sourceTree = "<group>"; };
+		EC712F6B2A3B03BA00F0CBD0 /* DrugCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrugCell.xib; sourceTree = "<group>"; };
 		ECE4B7CC2A39BED3009314E5 /* DrugClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrugClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECE4B7CF2A39BED3009314E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECE4B7D12A39BED3009314E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +51,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC712F692A3B039B00F0CBD0 /* DrugCell */ = {
+			isa = PBXGroup;
+			children = (
+				EC712F6A2A3B03BA00F0CBD0 /* DrugCell.swift */,
+				EC712F6B2A3B03BA00F0CBD0 /* DrugCell.xib */,
+			);
+			path = DrugCell;
+			sourceTree = "<group>";
+		};
 		ECE4B7C32A39BED3009314E5 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +96,7 @@
 		ECE4B7E62A39BEEC009314E5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EC712F692A3B039B00F0CBD0 /* DrugCell */,
 				ECE4B7D32A39BED3009314E5 /* LoginViewController.swift */,
 				EC712F5D2A3AEA6E00F0CBD0 /* MainViewController.swift */,
 				ECE4B7D52A39BED3009314E5 /* Main.storyboard */,
@@ -181,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECE4B7DC2A39BED5009314E5 /* Assets.xcassets in Resources */,
+				EC712F6D2A3B03BA00F0CBD0 /* DrugCell.xib in Resources */,
 				ECE4B7D72A39BED3009314E5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC712F602A3AED9F00F0CBD0 /* MainViewModel.swift in Sources */,
+				EC712F6C2A3B03BA00F0CBD0 /* DrugCell.swift in Sources */,
 				EC712F682A3AF0C700F0CBD0 /* Drug+CoreDataProperties.swift in Sources */,
 				EC712F672A3AF0C700F0CBD0 /* Drug+CoreDataClass.swift in Sources */,
 				ECE4B7DA2A39BED3009314E5 /* DrugClock.xcdatamodeld in Sources */,
