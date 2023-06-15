@@ -7,19 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EC712F5C2A39C1AD00F0CBD0 /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC712F5B2A39C1AD00F0CBD0 /* UIKit+Extensions.swift */; };
+		EC712F5E2A3AEA6E00F0CBD0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC712F5D2A3AEA6E00F0CBD0 /* MainViewController.swift */; };
+		EC712F602A3AED9F00F0CBD0 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC712F5F2A3AED9F00F0CBD0 /* MainViewModel.swift */; };
+		EC712F672A3AF0C700F0CBD0 /* Drug+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC712F652A3AF0C700F0CBD0 /* Drug+CoreDataClass.swift */; };
+		EC712F682A3AF0C700F0CBD0 /* Drug+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC712F662A3AF0C700F0CBD0 /* Drug+CoreDataProperties.swift */; };
 		ECE4B7D02A39BED3009314E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE4B7CF2A39BED3009314E5 /* AppDelegate.swift */; };
 		ECE4B7D22A39BED3009314E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE4B7D12A39BED3009314E5 /* SceneDelegate.swift */; };
 		ECE4B7D42A39BED3009314E5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE4B7D32A39BED3009314E5 /* LoginViewController.swift */; };
 		ECE4B7D72A39BED3009314E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECE4B7D52A39BED3009314E5 /* Main.storyboard */; };
 		ECE4B7DA2A39BED3009314E5 /* DrugClock.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ECE4B7D82A39BED3009314E5 /* DrugClock.xcdatamodeld */; };
 		ECE4B7DC2A39BED5009314E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECE4B7DB2A39BED5009314E5 /* Assets.xcassets */; };
-		ECE4B7DF2A39BED5009314E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECE4B7DD2A39BED5009314E5 /* LaunchScreen.storyboard */; };
 		ECE4B7EC2A39BF9C009314E5 /* UIKit+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE4B7EB2A39BF9C009314E5 /* UIKit+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EC712F5B2A39C1AD00F0CBD0 /* UIKit+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
+		EC712F5D2A3AEA6E00F0CBD0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		EC712F5F2A3AED9F00F0CBD0 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		EC712F652A3AF0C700F0CBD0 /* Drug+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Drug+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EC712F662A3AF0C700F0CBD0 /* Drug+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Drug+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		ECE4B7CC2A39BED3009314E5 /* DrugClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrugClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECE4B7CF2A39BED3009314E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECE4B7D12A39BED3009314E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,7 +32,6 @@
 		ECE4B7D62A39BED3009314E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ECE4B7D92A39BED3009314E5 /* DrugClock.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DrugClock.xcdatamodel; sourceTree = "<group>"; };
 		ECE4B7DB2A39BED5009314E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		ECE4B7DE2A39BED5009314E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECE4B7E02A39BED5009314E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECE4B7EB2A39BF9C009314E5 /* UIKit+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,8 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				ECE4B7D32A39BED3009314E5 /* LoginViewController.swift */,
+				EC712F5D2A3AEA6E00F0CBD0 /* MainViewController.swift */,
 				ECE4B7D52A39BED3009314E5 /* Main.storyboard */,
-				ECE4B7DD2A39BED5009314E5 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -89,6 +93,7 @@
 		ECE4B7E72A39BEEF009314E5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EC712F5F2A3AED9F00F0CBD0 /* MainViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -96,6 +101,8 @@
 		ECE4B7E82A39BEF1009314E5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EC712F652A3AF0C700F0CBD0 /* Drug+CoreDataClass.swift */,
+				EC712F662A3AF0C700F0CBD0 /* Drug+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -111,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				ECE4B7EB2A39BF9C009314E5 /* UIKit+Extension.swift */,
-				EC712F5B2A39C1AD00F0CBD0 /* UIKit+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -174,7 +180,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECE4B7DF2A39BED5009314E5 /* LaunchScreen.storyboard in Resources */,
 				ECE4B7DC2A39BED5009314E5 /* Assets.xcassets in Resources */,
 				ECE4B7D72A39BED3009314E5 /* Main.storyboard in Resources */,
 			);
@@ -187,10 +192,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC712F602A3AED9F00F0CBD0 /* MainViewModel.swift in Sources */,
+				EC712F682A3AF0C700F0CBD0 /* Drug+CoreDataProperties.swift in Sources */,
+				EC712F672A3AF0C700F0CBD0 /* Drug+CoreDataClass.swift in Sources */,
 				ECE4B7DA2A39BED3009314E5 /* DrugClock.xcdatamodeld in Sources */,
 				ECE4B7D42A39BED3009314E5 /* LoginViewController.swift in Sources */,
-				EC712F5C2A39C1AD00F0CBD0 /* UIKit+Extensions.swift in Sources */,
 				ECE4B7D02A39BED3009314E5 /* AppDelegate.swift in Sources */,
+				EC712F5E2A3AEA6E00F0CBD0 /* MainViewController.swift in Sources */,
 				ECE4B7D22A39BED3009314E5 /* SceneDelegate.swift in Sources */,
 				ECE4B7EC2A39BF9C009314E5 /* UIKit+Extension.swift in Sources */,
 			);
@@ -205,14 +213,6 @@
 				ECE4B7D62A39BED3009314E5 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		ECE4B7DD2A39BED5009314E5 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ECE4B7DE2A39BED5009314E5 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
