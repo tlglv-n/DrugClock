@@ -25,22 +25,25 @@ class DrugCell: UITableViewCell {
     
     private func formatTime(_ date: Date) -> String {
         let calendar = Calendar.current
-        let now = Date()
+            let now = Date()
+
+            var formatter = DateFormatter()
+            formatter.dateFormat = "HH:mm"
         
-        if calendar.isDateInToday(date) {
-            return "Today"
-        } else if calendar.isDateInYesterday(date) {
-            return "Yesterday"
-        } else if calendar.isDate(date, equalTo: now, toGranularity: .weekOfYear) {
-            let weekday = calendar.component(.weekday, from: date)
-            let formatter = DateFormatter()
-            formatter.dateFormat = "EEEE"
-            return formatter.string(from: date)
-        } else {
-            let formatter = DateFormatter()
-            formatter.dateFormat = "EEEE, MMM d"
-            return formatter.string(from: date)
-        }
+            if calendar.isDateInToday(date) {
+                return "Today, " + formatter.string(from: date)
+            } else if calendar.isDateInYesterday(date) {
+                return "Yesterday, " + formatter.string(from: date)
+            } else if calendar.isDateInTomorrow(date) {
+                return "Tomorrow, " + formatter.string(from: date)
+            } else if calendar.isDate(date, equalTo: now, toGranularity: .weekOfYear) {
+                let weekday = calendar.component(.weekday, from: date)
+                formatter.dateFormat = "EEEE, HH:mm"
+                return formatter.string(from: date)
+            } else {
+                formatter.dateFormat = "EEEE, HH:mm"
+                return formatter.string(from: date)
+            }
     }
     
     

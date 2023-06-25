@@ -16,36 +16,33 @@
                 <rect key="frame" x="0.0" y="0.0" width="351" height="75"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhU-sl-bOF">
-                        <rect key="frame" x="20" y="27" width="195" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhU-sl-bOF">
+                        <rect key="frame" x="20" y="27" width="33" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="dd/mm/yyyy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YF3-9Q-JH5">
-                        <rect key="frame" x="241" y="26" width="101" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="101" id="bOM-74-ZMT"/>
-                        </constraints>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="dd/mm/yyyy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YF3-9Q-JH5">
+                        <rect key="frame" x="242" y="27" width="101" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="mhU-sl-bOF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="6Af-E8-777"/>
-                    <constraint firstItem="YF3-9Q-JH5" firstAttribute="leading" secondItem="mhU-sl-bOF" secondAttribute="trailing" constant="26" id="Bjh-YO-LPn"/>
-                    <constraint firstItem="mhU-sl-bOF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-28" id="E36-xI-QfA"/>
-                    <constraint firstItem="mhU-sl-bOF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="JQf-cA-1az"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="YF3-9Q-JH5" secondAttribute="bottom" constant="17" id="blG-3s-bkP"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="YF3-9Q-JH5" secondAttribute="trailing" constant="-11" id="g9A-CB-FyF"/>
-                    <constraint firstItem="YF3-9Q-JH5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-29" id="oYM-1o-QQJ"/>
+                    <constraint firstAttribute="bottom" secondItem="mhU-sl-bOF" secondAttribute="bottom" constant="27" id="0CB-Qp-7Y5"/>
+                    <constraint firstItem="mhU-sl-bOF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="27" id="K2U-mG-Nu5"/>
+                    <constraint firstAttribute="bottom" secondItem="YF3-9Q-JH5" secondAttribute="bottom" constant="27" id="UcK-CZ-zLl"/>
+                    <constraint firstItem="YF3-9Q-JH5" firstAttribute="leading" secondItem="mhU-sl-bOF" secondAttribute="trailing" constant="189" id="pIa-0o-O7u"/>
+                    <constraint firstItem="mhU-sl-bOF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="qqf-u9-ccB"/>
+                    <constraint firstItem="YF3-9Q-JH5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="27" id="t9V-pl-lgG"/>
+                    <constraint firstAttribute="trailing" secondItem="YF3-9Q-JH5" secondAttribute="trailing" constant="8" id="zMy-gv-RMi"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="timeLabel" destination="YF3-9Q-JH5" id="hQI-jN-ue6"/>
-                <outlet property="titleLabel" destination="YF3-9Q-JH5" id="pnO-L7-j8q"/>
+                <outlet property="titleLabel" destination="mhU-sl-bOF" id="agZ-Ve-sZR"/>
             </connections>
             <point key="canvasLocation" x="160.1449275362319" y="108.14732142857143"/>
         </tableViewCell>

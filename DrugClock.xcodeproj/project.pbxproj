@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC2294132A48456200535316 /* AlarmDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2294122A48456200535316 /* AlarmDetailViewController.swift */; };
 		EC712F5E2A3AEA6E00F0CBD0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC712F5D2A3AEA6E00F0CBD0 /* MainViewController.swift */; };
 		EC712F602A3AED9F00F0CBD0 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC712F5F2A3AED9F00F0CBD0 /* MainViewModel.swift */; };
 		EC712F672A3AF0C700F0CBD0 /* Drug+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC712F652A3AF0C700F0CBD0 /* Drug+CoreDataClass.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC2294122A48456200535316 /* AlarmDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDetailViewController.swift; sourceTree = "<group>"; };
 		EC712F5D2A3AEA6E00F0CBD0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EC712F5F2A3AED9F00F0CBD0 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		EC712F652A3AF0C700F0CBD0 /* Drug+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Drug+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -51,6 +53,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC22940F2A4718AF00535316 /* AddButtonController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AddButtonController;
+			sourceTree = "<group>";
+		};
 		EC712F692A3B039B00F0CBD0 /* DrugCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,9 +105,11 @@
 		ECE4B7E62A39BEEC009314E5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EC22940F2A4718AF00535316 /* AddButtonController */,
 				EC712F692A3B039B00F0CBD0 /* DrugCell */,
 				ECE4B7D32A39BED3009314E5 /* LoginViewController.swift */,
 				EC712F5D2A3AEA6E00F0CBD0 /* MainViewController.swift */,
+				EC2294122A48456200535316 /* AlarmDetailViewController.swift */,
 				ECE4B7D52A39BED3009314E5 /* Main.storyboard */,
 			);
 			path = View;
@@ -216,6 +227,7 @@
 				ECE4B7D02A39BED3009314E5 /* AppDelegate.swift in Sources */,
 				EC712F5E2A3AEA6E00F0CBD0 /* MainViewController.swift in Sources */,
 				ECE4B7D22A39BED3009314E5 /* SceneDelegate.swift in Sources */,
+				EC2294132A48456200535316 /* AlarmDetailViewController.swift in Sources */,
 				ECE4B7EC2A39BF9C009314E5 /* UIKit+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
