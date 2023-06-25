@@ -9,18 +9,22 @@ import UIKit
 
 class DrugCell: UITableViewCell {
 
+    @IBOutlet weak var drugCellView: UIView!
     @IBOutlet weak var titleLabel: UILabel?
     @IBOutlet weak var timeLabel: UILabel?
     
     func configure(with drug: Drug) {
         titleLabel?.text = drug.name
         timeLabel?.text = formatTime(drug.time!)
+        
+        titleLabel?.textColor = UIColor.white
+        timeLabel?.textColor = UIColor.white
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
-        
+        drugCellView.backgroundColor = UIColor(hex: "#2F283B")
     }
     
     private func formatTime(_ date: Date) -> String {

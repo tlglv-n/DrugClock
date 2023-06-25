@@ -53,13 +53,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EC22940F2A4718AF00535316 /* AddButtonController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AddButtonController;
-			sourceTree = "<group>";
-		};
 		EC712F692A3B039B00F0CBD0 /* DrugCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,7 +98,6 @@
 		ECE4B7E62A39BEEC009314E5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EC22940F2A4718AF00535316 /* AddButtonController */,
 				EC712F692A3B039B00F0CBD0 /* DrugCell */,
 				ECE4B7D32A39BED3009314E5 /* LoginViewController.swift */,
 				EC712F5D2A3AEA6E00F0CBD0 /* MainViewController.swift */,

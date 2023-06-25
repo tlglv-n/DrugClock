@@ -24,11 +24,17 @@ class MainViewController: UIViewController {
         super.viewDidAppear(animated)
         fetchViewModel()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchViewModel()
+    }
     
     private func initialState() {
         tableView?.register(DrugCell.self)
         tableView?.delegate = self
         tableView?.dataSource = self
+        mainView?.backgroundColor = UIColor(hex: "#2F283B")
+        tableView?.backgroundColor = UIColor(hex: "#2F283B")
         fetchViewModel()
     }
     
@@ -39,30 +45,33 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func addButtonPressed(_ sender: Any) {
-        let alertController = UIAlertController(title: "Add Clocker", message: nil, preferredStyle: .alert)
+//        let alertController = UIAlertController(title: "Add Clocker", message: nil, preferredStyle: .alert)
+//
+//        let datePicker = UIDatePicker()
+//        datePicker.datePickerMode = .dateAndTime
+////        alertController.view.addSubview(datePicker)
+//
+//
+//        alertController.addTextField() {(textField) in
+//            textField.placeholder = "Title"
+//        }
+//
+//        alertController.addAction(UIAlertAction(title: "OK", style: .default) { _ in
+//            let titleTextField = alertController.textFields?[0]
+//            let date = datePicker.date
+//            if let title = titleTextField?.text {
+//                self.mainViewModel.addData(name: title, time: date) {
+//                    self.tableView?.reloadData()
+//                }
+//            } else {
+//                print("Error alert")
+//            }
+//        })
+//        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+//        present(alertController, animated: true)
         
-        let datePicker = UIDatePicker()
-        datePicker.datePickerMode = .dateAndTime
-//        alertController.view.addSubview(datePicker)
         
         
-        alertController.addTextField() {(textField) in
-            textField.placeholder = "Title"
-        }
-        
-        alertController.addAction(UIAlertAction(title: "OK", style: .default) { _ in
-            let titleTextField = alertController.textFields?[0]
-            let date = datePicker.date
-            if let title = titleTextField?.text {
-                self.mainViewModel.addData(name: title, time: date) {
-                    self.tableView?.reloadData()
-                }
-            } else {
-                print("Error alert")
-            }
-        })
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-        present(alertController, animated: true)
     }
     
 }
