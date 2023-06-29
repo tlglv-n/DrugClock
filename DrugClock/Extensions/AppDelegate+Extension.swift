@@ -5,7 +5,9 @@
 //  Created by Nurikk T. on 29.06.2023.
 //
 
-import Foundation
+import UserNotifications
+import UIKit
+
 extension AppDelegate: UNUserNotificationCenterDelegate {
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         print(deviceToken)

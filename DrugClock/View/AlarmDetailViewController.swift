@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class AlarmDetailViewController: UIViewController {
     
@@ -36,9 +37,34 @@ class AlarmDetailViewController: UIViewController {
         mainViewModel.addData(name: titleTextField.text!, time: time!) {
             self.delegate?.didAddNewAlarm()
             self.dismiss(animated: true)
+            
+            self.schedulePushNotification(at: time!)
         }
     }
     @IBAction func cancelButtonPressed(_ sender: Any) {
         dismiss(animated: true)
+    }
+    
+    private func schedulePushNotification(at date: Date) {
+        let content = UNMutableNotificationContent()
+        content.title = titleTextField.text ?? "Alarm"
+        content.body = "Time to take your medication!"
+        content.sound = UNNotificationSound.default
+        
+        
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: date)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "AlarmNotification", content: content, trigger: trigger)
+        
+        let center = UNUserNotificationCenter.current()
+        center.add(request) { error in
+            if let error = error {
+                print("Error scheduling notification: \(error.localizedDescription)")
+            } else {
+                print("Notification scheduled successfully")
+            }
+        }
     }
 }
