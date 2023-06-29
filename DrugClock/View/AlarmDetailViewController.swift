@@ -8,27 +8,33 @@
 import UIKit
 
 class AlarmDetailViewController: UIViewController {
+    
+    
 
     @IBOutlet var alarmDetailView: UIView!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
     
-    let mainViewModel = MainViewModel()
-    let mainViewController = MainViewController()
+    private let mainViewModel = MainViewModel()
+    weak var delegate: AlarmDetailViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        alarmDetailView?.backgroundColor = UIColor(hex: "#2F283B")
+        initialState()
+        
     }
     
+    private func initialState() {
+        alarmDetailView?.backgroundColor = UIColor(hex: "#2F283B")
+        datePicker.setValue(UIColor.white, forKey: "textColor")
+        
+    }
     
     @IBAction func saveButtonPressed(_ sender: Any) {
         let time = datePicker?.date
         
         mainViewModel.addData(name: titleTextField.text!, time: time!) {
-            self.mainViewModel.fetchData {
-                self.mainViewController.tableView?.reloadData()
-            }
+            self.delegate?.didAddNewAlarm()
             self.dismiss(animated: true)
         }
     }

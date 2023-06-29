@@ -7,12 +7,12 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, AlarmDetailViewControllerDelegate {
 
     @IBOutlet var mainView: UIView!
     @IBOutlet weak var tableView: UITableView?
     
-    let mainViewModel = MainViewModel()
+    private let mainViewModel = MainViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,18 +24,22 @@ class MainViewController: UIViewController {
         super.viewDidAppear(animated)
         fetchViewModel()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        fetchViewModel()
+    func didAddNewAlarm() {
+        mainViewModel.fetchData {
+            self.tableView?.reloadData()
+        }
     }
     
     private func initialState() {
-        tableView?.register(DrugCell.self)
-        tableView?.delegate = self
-        tableView?.dataSource = self
-        mainView?.backgroundColor = UIColor(hex: "#2F283B")
-        tableView?.backgroundColor = UIColor(hex: "#2F283B")
-        fetchViewModel()
+        DispatchQueue.main.async {
+            self.tableView?.register(DrugCell.self)
+            self.tableView?.delegate = self
+            self.tableView?.dataSource = self
+            self.mainView?.backgroundColor = UIColor(hex: "#2F283B")
+            self.tableView?.backgroundColor = UIColor(hex: "#2F283B")
+            self.fetchViewModel()
+        }
+        
     }
     
     private func fetchViewModel() {
@@ -45,33 +49,15 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func addButtonPressed(_ sender: Any) {
-//        let alertController = UIAlertController(title: "Add Clocker", message: nil, preferredStyle: .alert)
-//
-//        let datePicker = UIDatePicker()
-//        datePicker.datePickerMode = .dateAndTime
-////        alertController.view.addSubview(datePicker)
-//
-//
-//        alertController.addTextField() {(textField) in
-//            textField.placeholder = "Title"
-//        }
-//
-//        alertController.addAction(UIAlertAction(title: "OK", style: .default) { _ in
-//            let titleTextField = alertController.textFields?[0]
-//            let date = datePicker.date
-//            if let title = titleTextField?.text {
-//                self.mainViewModel.addData(name: title, time: date) {
-//                    self.tableView?.reloadData()
-//                }
-//            } else {
-//                print("Error alert")
-//            }
-//        })
-//        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-//        present(alertController, animated: true)
-        
-        
-        
+        performSegue(withIdentifier: "AddAlarmSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddAlarmSegue" {
+            if let alarmDetailVC = segue.destination as? AlarmDetailViewController {
+                alarmDetailVC.delegate = self
+            }
+        }
     }
     
 }

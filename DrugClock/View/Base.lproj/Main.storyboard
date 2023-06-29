@@ -108,7 +108,7 @@
                                 <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
                                 <connections>
                                     <action selector="addButtonPressed:" destination="8CR-M0-c87" eventType="touchUpInside" id="ltc-al-8wS"/>
-                                    <segue destination="LTE-SQ-dif" kind="showDetail" id="XHm-Zt-tk7"/>
+                                    <segue destination="LTE-SQ-dif" kind="showDetail" identifier="AddAlarmSegue" id="XHm-Zt-tk7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -163,7 +163,7 @@
                                     <action selector="saveButtonPressed:" destination="LTE-SQ-dif" eventType="touchUpInside" id="mxq-GJ-qvG"/>
                                 </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="j9V-Br-D89">
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="j9V-Br-D89">
                                 <rect key="frame" x="0.0" y="102" width="414" height="295"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="295" id="VEt-Dt-kZL"/>

@@ -11,8 +11,18 @@ import CoreData
 class MainViewModel {
     
     var drugs: [Drug]?
-    
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    private let context: NSManagedObjectContext
+        
+    init(context: NSManagedObjectContext) {
+        self.context = context
+    }
+
+    convenience init() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            fatalError("Unable to access the AppDelegate")
+        }
+        self.init(context: appDelegate.persistentContainer.viewContext)
+    }
     
     func fetchData(tableViewHandler handler: @escaping () -> ()) {
         do {
