@@ -11,8 +11,8 @@
 		EC2294152A49A51500535316 /* AlarmDetailViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2294142A49A51500535316 /* AlarmDetailViewControllerDelegate.swift */; };
 		EC22941D2A4AEEC600535316 /* DrugClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC22941C2A4AEEC600535316 /* DrugClockTests.swift */; };
 		EC22943B2A4C721800535316 /* LoginViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC22943A2A4C721800535316 /* LoginViewTests.swift */; };
-		EC22943D2A4C73F800535316 /* MainViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC22943C2A4C73F800535316 /* MainViewTests.swift */; };
 		EC2294402A4D684A00535316 /* AppDelegate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC22943F2A4D684A00535316 /* AppDelegate+Extension.swift */; };
+		EC2294422A4F04C200535316 /* AlarmDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2294412A4F04C200535316 /* AlarmDetailTests.swift */; };
 		EC712F5E2A3AEA6E00F0CBD0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC712F5D2A3AEA6E00F0CBD0 /* MainViewController.swift */; };
 		EC712F602A3AED9F00F0CBD0 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC712F5F2A3AED9F00F0CBD0 /* MainViewModel.swift */; };
 		EC712F672A3AF0C700F0CBD0 /* Drug+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC712F652A3AF0C700F0CBD0 /* Drug+CoreDataClass.swift */; };
@@ -44,9 +44,9 @@
 		EC22941A2A4AEEC600535316 /* DrugClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrugClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC22941C2A4AEEC600535316 /* DrugClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugClockTests.swift; sourceTree = "<group>"; };
 		EC22943A2A4C721800535316 /* LoginViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewTests.swift; sourceTree = "<group>"; };
-		EC22943C2A4C73F800535316 /* MainViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewTests.swift; sourceTree = "<group>"; };
 		EC22943E2A4D672900535316 /* DrugClock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DrugClock.entitlements; sourceTree = "<group>"; };
 		EC22943F2A4D684A00535316 /* AppDelegate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Extension.swift"; sourceTree = "<group>"; };
+		EC2294412A4F04C200535316 /* AlarmDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDetailTests.swift; sourceTree = "<group>"; };
 		EC712F5D2A3AEA6E00F0CBD0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EC712F5F2A3AED9F00F0CBD0 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		EC712F652A3AF0C700F0CBD0 /* Drug+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Drug+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -86,8 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				EC22941C2A4AEEC600535316 /* DrugClockTests.swift */,
+				EC2294412A4F04C200535316 /* AlarmDetailTests.swift */,
 				EC22943A2A4C721800535316 /* LoginViewTests.swift */,
-				EC22943C2A4C73F800535316 /* MainViewTests.swift */,
 			);
 			path = DrugClockTests;
 			sourceTree = "<group>";
@@ -285,7 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC22943B2A4C721800535316 /* LoginViewTests.swift in Sources */,
-				EC22943D2A4C73F800535316 /* MainViewTests.swift in Sources */,
+				EC2294422A4F04C200535316 /* AlarmDetailTests.swift in Sources */,
 				EC22941D2A4AEEC600535316 /* DrugClockTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
